@@ -11,10 +11,6 @@ html, body{
 	height: 100%;
 }
 
-body{
-	background-color: black;
-}
-
 .page{
 	position: absolute;	
 	width: 100%;
@@ -30,17 +26,14 @@ body{
 }
 
 .bg__1{
-	background: linear-gradient(-50deg, #FEE140 0%, #FA709A 100%);
+	background: linear-gradient(-20deg, #FEE144 0%, #FA709A 100%);
 	background-size: 400% 400%;
-	animation: gradient 40s ease infinite;
+	animation: gradient 10s ease infinite;
 	z-index: 3;
 }
 
 .bg__2{
-	background: url('img/bg_2.jpg') 0 0 / cover no-repeat;
-	z-index: 2;
-	opacity: 0;
-
+	z-index: 4;
 }
 
 .bg__3{
@@ -71,6 +64,10 @@ body{
 	margin-top: 200px;
 	font-size: 80px;
 	color: #eee;
+
+	transform: translate(0px, 120px);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
 }
 
 .subtitle{
@@ -78,4 +75,17 @@ body{
 	margin-top: 30px;
 	font-size: 60px;
 	color: #eee;
+
+	transform: translate(0px, 120px);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+._active{
+	transform: translate(0px, 0px);
+	opacity: 1;
+}
+
+.subtitle._active{
+	transition: all 0.8s ease 0.8s;
 }
