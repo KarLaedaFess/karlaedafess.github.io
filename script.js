@@ -1,4 +1,4 @@
-const animItems = document.querySelectorAll('.text');
+const animItems = document.querySelectorAll('.anim');
 
 function offset(el)
 {
@@ -8,13 +8,10 @@ function offset(el)
     return {top: rect.top + scrollTop, left: rect.left + screenLeft}
 }
 
-if (animItems.length > 0)
+function animOnScroll()
 {
-    window.addEventListener('scroll', animOnScroll);
-    function animOnScroll()
-    {
-        for (let i = 0; i < animItems.length; i++)
-        {
+    for (let i = 0; i < animItems.length; i++)
+       {
             const animItem = animItems[i];
             const animItemHeight = animItem.offsetHeight;
             const animItemOffset = offset(animItem).top;
@@ -25,7 +22,6 @@ if (animItems.length > 0)
             {
                 animItemPoint = window.innerHeight - window.innerHeight / animStart;
             }
-
             if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight))
             {
                 animItem.classList.add('_active');
@@ -38,6 +34,10 @@ if (animItems.length > 0)
                 }
             }
         }
-    }
+}
+
+if (animItems.length > 0)
+{
+    window.addEventListener('scroll', animOnScroll);
     animOnScroll();
 }
