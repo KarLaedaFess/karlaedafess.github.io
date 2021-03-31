@@ -23,8 +23,14 @@ html, body{
 	display: flex;
 }
 
+.fullscreen1{
+	min-height: 100vh;
+	background-color: black;
+	display: flex;
+}
+
 .bg{
-	position: absolute;
+	position: fixed;
 	background: url('img/bg/bg__parallax.png') 0 0 / cover no-repeat;
 	max-width: 1100px;
 	width: 100%;
@@ -32,7 +38,7 @@ html, body{
 	top: 0;
 	left: 0;
 	margin: 0 100px;
-	z-index: 20;
+	z-index: 2;
 }
 
 .fullscreen_body{
@@ -43,6 +49,14 @@ html, body{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	z-index: 3;
+}
+
+.shadow{
+	left: 0;
+    height: 400px;
+    width: 100%;
+    background: linear-gradient(to top, black, blue);
 }
 
 .text{
