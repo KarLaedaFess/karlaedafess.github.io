@@ -51,3 +51,5 @@ if (animItems.length > 0)
 
 window.addEventListener('scroll', hideArrow);
 
+let rellax = new Rellax('.rellax');
+
