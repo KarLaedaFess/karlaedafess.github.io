@@ -36,10 +36,18 @@ function animOnScroll()
         }
 }
 
+function hideArrow()
+{
+    let arrow = document.querySelector('.arrow');
+
+    arrow.classList.add('_hide');
+}
+
 if (animItems.length > 0)
 {
     window.addEventListener('scroll', animOnScroll);
     animOnScroll();
 }
 
-let rellax = new Rellax('.rellax');
+window.addEventListener('scroll', hideArrow);
+

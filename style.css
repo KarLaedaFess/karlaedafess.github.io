@@ -12,86 +12,99 @@ html, body{
 }
 
 .wrapper{
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
-.fullscreen{
-	min-height: 100vh;
-	background-color: blue;
-	display: flex;
+.screen{
+    height: 100vh;
 }
 
-.fullscreen1{
-	min-height: 100vh;
-	background-color: black;
-	display: flex;
+.screen1{
+    background: url('img/bg/flowers.png') 0 0 / cover no-repeat;
 }
 
-.bg{
-	position: fixed;
-	background: url('img/bg/bg__parallax.png') 0 0 / cover no-repeat;
-	max-width: 1100px;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	margin: 0 100px;
-	z-index: 2;
-}
-
-.fullscreen_body{
-	flex: 1 1 auto;
-	max-width: 1000px;
-	margin: 0 auto;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	z-index: 3;
-}
-
-.shadow{
-	left: 0;
-    height: 400px;
-    width: 100%;
-    background: linear-gradient(to top, black, blue);
-}
-
-.text{
-	font-family: 'Nunito', sans-serif;
-	text-transform: uppercase;
+.screen1__content{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
 }
 
 .title{
-  	font-size: 80px;
- 	color: white;
-	text-align: center;
-
-	transform: translate(0px, 120px);
-	opacity: 0;
-	transition: all 0.8s ease 0s;
+    display: inline-block;
+    margin: 335px auto 0 auto;
 }
 
-.subtitle{
-	font-size: 60px;
-	color: #eee;
+h2{
+    font-size: 100px;
+}
 
-	transform: translate(0px, 120px);
+h2, p{
+    font-family: Nunito;
+    margin: 20px;
+    color: #2b2c34;
+    text-align: center;
+}
+
+.screen2{
+    background: gray;
+}
+
+/*arrow starts*/
+.arrow {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 30px auto 80px auto;
+}
+.arrow:before,
+.arrow:after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-left: 26px solid #868686;
+    border-bottom: 26px solid #8b8b8b;
+    animation: arrow 3s linear infinite;
+}
+.arrow:after {
+    animation: arrow 3s linear infinite -1.5s;
+}
+@keyframes arrow {
+    0% {
+        opacity: 0;
+        transform: translate(0, -53px) rotate(-45deg);
+    }
+    10%, 90% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;  
+        transform: translate(0, 0) rotate(-45deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, 53px) rotate(-45deg);
+    }
+}
+/*arrow ends*/
+
+/*text-animation starts*/
+.anim{
+	/*transform: translate(0px, 100px);*/
 	opacity: 0;
-	transition: all 0.8s ease 0s;
+	transition: all 4s ease 0s;
 }
 
 ._active{
 	transform: translate(0px, 0px);
 	opacity: 1;
 }
+/*text-animation ends*/
 
-.title._active{
-	transition: all 0.8s ease 0.8s;
-}
-
-.subtitle._active{
-	transition: all 0.8s ease 1.2s;
+._hide{
+    opacity: 0;
+	transition: all 4s ease 0s;
 }
