@@ -31,29 +31,33 @@ html, body{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .title{
     display: inline-block;
-    margin: 330px auto 0 auto;
+    margin: 15% auto 0 auto;
 }
 
 .subtitle{
     display: inline-block;
     width: 82%;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
     padding: 20px;
+    border-radius: 7%;
+    background: linear-gradient(45deg, rgba(255, 226, 159, 1) 0%, rgba(255, 169, 159, 0.5) 48%, rgba(255, 113, 154, 0.1) 100%);
 }
 
-p{
-    font-size: 40px;
-    text-align: justify;
-}
+
 
 h2{
     font-size: 120px;
     text-align: center;
+}
+
+p{
+    font-size: 45px;
+    text-align: justify;
 }
 
 h2, p{
@@ -65,46 +69,6 @@ h2, p{
 .screen2{
     background: white;
 }
-
-/*arrow starts*/
-.arrow {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    margin: 30px auto 80px auto;
-}
-.arrow:before,
-.arrow:after {
-    content: '';
-    position: absolute;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    border-left: 26px solid #868686;
-    border-bottom: 26px solid #8b8b8b;
-    animation: arrow 3s linear infinite;
-}
-.arrow:after {
-    animation: arrow 3s linear infinite -1.5s;
-}
-@keyframes arrow {
-    0% {
-        opacity: 0;
-        transform: translate(0, -53px) rotate(-45deg);
-    }
-    10%, 90% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;  
-        transform: translate(0, 0) rotate(-45deg);
-    }
-    100% {
-        opacity: 0;
-        transform: translate(0, 53px) rotate(-45deg);
-    }
-}
-/*arrow ends*/
 
 /*text-animation starts*/
 .anim{
@@ -122,8 +86,3 @@ h2, p{
     transition: all 4s ease 0.7s;
 }
 /*text-animation ends*/
-
-._hide{
-    opacity: 0;
-	transition: all 4s ease 0s;
-}

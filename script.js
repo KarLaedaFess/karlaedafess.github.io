@@ -36,20 +36,11 @@ function animOnScroll()
         }
 }
 
-function hideArrow()
-{
-    let arrow = document.querySelector('.arrow');
-
-    arrow.classList.add('_hide');
-}
-
 if (animItems.length > 0)
 {
     window.addEventListener('scroll', animOnScroll);
     animOnScroll();
 }
-
-window.addEventListener('scroll', hideArrow);
 
 let rellax = new Rellax('.rellax');
 
