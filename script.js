@@ -36,11 +36,27 @@ function animOnScroll()
         }
 }
 
+function hideBG()
+{
+    const smoke = document.querySelector('.bg2');
+    const elem = document.querySelector('.images');
+    const posOfImages = offset(elem).top;
+    console.log(posOfImages);
+    console.log(pageYOffset);
+    
+    if (pageYOffset * 1.5 > posOfImages)
+    {
+        smoke.classList.add('_hide');
+    }
+}
+
 if (animItems.length > 0)
 {
     window.addEventListener('scroll', animOnScroll);
     animOnScroll();
 }
+
+window.addEventListener('scroll', hideBG);
 
 let rellax = new Rellax('.rellax');
 
