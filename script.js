@@ -15,7 +15,7 @@ function animOnScroll()
             const animItem = animItems[i];
             const animItemHeight = animItem.offsetHeight;
             const animItemOffset = offset(animItem).top;
-            const animStart = 2;
+            const animStart = 1;
 
             let animItemPoint = window.innerHeight - animItemHeight / animStart;
             if (animItemHeight > window.innerHeight)

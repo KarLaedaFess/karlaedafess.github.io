@@ -16,13 +16,24 @@ html, body{
     flex-direction: column;
 }
 
-.bg{
+.bg1{
     position: fixed;
     width: 100%;
     height: 100vh;
     background: url('img/bg/flowers.png') 0 0 / cover no-repeat;
     background-position: center;
     z-index: -1;
+    opacity: 0.8;
+}
+
+.bg2{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: url('img/bg/cool_effect.png') 0 0 / cover no-repeat;
+    background-position: center;
+    z-index: 1;
+    opacity: 0.5;
 }
 
 .screen{
@@ -37,7 +48,7 @@ html, body{
 
 .img{
     width: 60%;
-    margin: 100px auto;
+    margin: 100px auto  50vh auto;
 }
 
 img{
@@ -47,7 +58,7 @@ img{
 
 .title{
     display: inline-block;
-    margin: 13% auto 0 auto;
+    margin: 8% auto 0 auto;
 }
 
 .subtitle{
@@ -72,7 +83,11 @@ p{
 h2, p{
     font-family: Nunito;
     margin: 20px;
-    color: #2b2c34;
+    /*color: #2b2c34;*/
+    background-clip: content-box;
+    background: -webkit-linear-gradient(45deg, black, rgb(255, 78, 108), #2b2c34);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /*text-animation starts*/
