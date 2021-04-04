@@ -16,6 +16,19 @@ html, body{
     flex-direction: column;
 }
 
+.preloader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: 5;
+}
+
+.done{
+    display: none;
+    transition: all 2s ease 0s;;
+}
+
 .bg1{
     position: fixed;
     width: 100%;
