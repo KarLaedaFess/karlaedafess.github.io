@@ -1,3 +1,4 @@
+//TEXT ANIMATION ON SCROLL
 const animItems = document.querySelectorAll('.anim');
 
 function offset(el)
@@ -35,14 +36,14 @@ function animOnScroll()
             }
         }
 }
+//////
 
+//HIDE BACKGROUND
 function hideBG()
 {
     const smoke = document.querySelector('.bg2');
     const elem = document.querySelector('.images');
     const posOfImages = offset(elem).top;
-    console.log(posOfImages);
-    console.log(pageYOffset);
     
     if (pageYOffset * 1.5 > posOfImages)
     {
@@ -55,6 +56,29 @@ if (animItems.length > 0)
     window.addEventListener('scroll', animOnScroll);
     animOnScroll();
 }
+///////
+
+
+//LAZY LOADING
+const images = document.querySelectorAll("img");
+
+let imageOptions = {};
+
+let observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        
+        const image = entry.target;
+        const newURL = image.getAttribute('data-src');
+        image.src = newURL;
+        observer.unobserve(image);
+    });
+}, imageOptions);
+///////
+
+images.forEach((image) => {
+    observer.observe(image);
+});
 
 window.addEventListener('scroll', hideBG);
 
