@@ -38,6 +38,16 @@ function animOnScroll()
 }
 //////
 
+function fadeInBG()
+{
+    const bg = document.querySelectorAll('.fadeOut');
+
+    for (let i = 0; i < bg.length; i++)
+    {
+        bg[i].classList.add('_fadeIn');
+    }
+}
+
 //HIDE BACKGROUND
 function hideBG()
 {
@@ -64,6 +74,8 @@ if (animItems.length > 0)
     animOnScroll();
 }
 ///////
+
+fadeInBG();
 
 window.addEventListener('scroll', hideBG);
 
