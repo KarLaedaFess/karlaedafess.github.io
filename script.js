@@ -39,7 +39,7 @@ function animOnScroll()
 //////
 
 //HIDE BACKGROUND
-function hideBG()
+/*function hideBG()
 {
     const smoke = document.querySelector('.bg2');
     const elem = document.querySelector('.images');
@@ -56,7 +56,7 @@ function hideBG()
                 smoke.classList.remove('_hide');
             }
     }
-}
+}*/
 /////
 
 //PRELOADER
@@ -75,7 +75,7 @@ if (animItems.length > 0)
     setTimeout(animOnScroll, 2500);
 }
 
-window.addEventListener('scroll', hideBG);
+//window.addEventListener('scroll', hideBG);
 
 let rellax = new Rellax('.rellax');
 
