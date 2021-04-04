@@ -57,20 +57,22 @@ function hideBG()
             }
     }
 }
+/////
+
+//PRELOADER
+window.onload = function()
+{
+    const preloader = document.querySelector('.preloader');
+    setTimeout(function() {
+        preloader.classList.add('done');
+    }, 2000);
+}
+/////
 
 if (animItems.length > 0)
 {
     window.addEventListener('scroll', animOnScroll);
-    animOnScroll();
-}
-///////
-
-//PRELOADER
-
-window.onload = function()
-{
-    const preloader = document.querySelector('.preloader');
-    preloader.classList.add('done');
+    setTimeout(animOnScroll, 2500);
 }
 
 window.addEventListener('scroll', hideBG);
