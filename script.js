@@ -59,16 +59,6 @@ function animOnScroll()
 }*/
 /////
 
-//PRELOADER
-window.onload = function()
-{
-    const preloader = document.querySelector('.preloader');
-    setTimeout(function() {
-        preloader.classList.add('done');
-    }, 2000);
-}
-/////
-
 if (animItems.length > 0)
 {
     window.addEventListener('scroll', animOnScroll);
