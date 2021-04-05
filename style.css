@@ -139,6 +139,17 @@ h2, p, q{
     -webkit-text-fill-color: transparent;
 }
 
+.footer{
+    height: 100px;
+    background: #333;
+    text-transform: uppercase;
+    padding: auto 0;
+}
+
+.footer p{
+    text-align: center;
+}
+
 /*animation starts*/
 .anim{
 	opacity: 0;
