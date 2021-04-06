@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
 
-*,*:before,*:after{
+*{
 	padding: 0;
 	margin: 0;
     border: 0;
@@ -11,6 +11,10 @@ html, body{
 	height: 100%;
 }
 
+body{
+    max-width: 1200px;
+}
+
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -18,21 +22,21 @@ html, body{
 
 .preloader{
     display: flex;
-    position: fixed;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
     width: 100%;
+    position: fixed;
     height: 100vh;
     background: white;
     z-index: 5;
-    align-items: center;
-    align-content: center; 
-    justify-content: center;
     transition: 2s all;
 }
 
 .circle{
     display: inline-block;
-    width: 191px;
-    height: 191px;
+    width: 171px;
+    height: 171px;
 }
 
 .done{
@@ -89,11 +93,12 @@ html, body{
 }
 
 .img{
-    width: 80%;
-    margin: 90px auto  200px auto;
+    width: 90%;
+    height: 70%;
+    margin: 30px auto;
     padding: 30px;
     border-radius: 7%;
-    box-shadow: 10px 10px 20px rgba(250, 50, 50, .4);
+    box-shadow: 15px 15px 25px rgba(250, 50, 50, .4);
 }
 
 img{
@@ -149,36 +154,3 @@ h2, p, q{
 .footer p{
     text-align: center;
 }
-
-/*animation starts*/
-.anim{
-	opacity: 0;
-	transition: all 3s ease 0s;
-}
-
-._active{
-	transform: translate(0px, 0px);
-	opacity: 1;
-}
-
-.images .anim{
-	transition: all 1s ease 0s;
-}
-
-.images ._active{
-	transition: all 1s ease 0s;
-}
-
-.subtitle ._active{
-    transition: all 4s ease 1s;
-}
-
-._hide{
-    opacity: 0;
-    transition: all 2s ease 0s;
-}
-
-.no_hide{
-    transition: all 2s ease 0s;
-}
-/*animation ends*/
