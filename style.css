@@ -13,6 +13,7 @@ html, body{
 
 body{
     max-width: 1200px;
+    font-family: Nunito;
 }
 
 .wrapper{
@@ -102,6 +103,7 @@ body{
 }
 
 img{
+    margin: 10px;
     width: 100%;
     height: 100%;
     border-radius: 3%;
@@ -117,31 +119,47 @@ img{
 }
 
 .subtitle{
+    font-size: 2.8rem;
+    
     display: inline-block;
     width: 82%;
-    margin: -200px auto 0 auto;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 35px;
     border-radius: 7%;
-    background: linear-gradient(45deg, rgba(255, 226, 159, 1) 0%, rgba(255, 169, 159, 0.5) 48%, rgba(255, 113, 154, 0.1) 100%);
+    background: linear-gradient(45deg, rgba(255, 226, 159, 1) 0%, rgba(255, 169, 159, 0.7) 48%, rgba(255, 113, 154, 0.3) 100%);
 }
 
-h2{
-    font-size: 7.5rem;
-    text-align: center;
-}
-
-p, q{
-    font-size: 2.8rem;
-    text-align: justify;
-}
-
-h2, p, q{
-    font-family: Nunito;
-    margin: 20px;
+.subtitle p{
     background-clip: content-box;
     background: -webkit-linear-gradient(45deg, black, rgb(255, 78, 108), #2b2c34);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+h2{
+    font-size: 7.3rem;
+    text-align: center;
+
+    background-clip: content-box;
+    background: -webkit-linear-gradient(45deg, black, rgb(255, 78, 108), #2b2c34);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.photos__goes{
+    font-size: 3rem;
+    border-radius: 5%;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 82%;
+    padding: 35px;
+    margin: 0 auto 50px auto;
+    background: linear-gradient(90deg, #FC5C7D   0%, #6A82FB 100%);
+}
+
+.gray{
+    color: white;
+    text-align: center;
 }
 
 .footer{
