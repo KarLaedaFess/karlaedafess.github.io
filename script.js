@@ -23,8 +23,5 @@
 
 let rellax = new Rellax('.rellax');
 
-AOS.init({
-    offset: 700,
-    duration: 1000
-});
+AOS.init();
 
