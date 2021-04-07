@@ -31,7 +31,6 @@ body{
     height: 100vh;
     background: white;
     z-index: 5;
-    transition: 2s all;
 }
 
 .circle{
@@ -42,7 +41,7 @@ body{
 
 .done{
     opacity: 0;
-    transition: all 0.5s ease 0s;
+    transition: all 1s ease 0s;
 }
 
 .bg1{
@@ -71,7 +70,7 @@ body{
 
 .screen1__content{
     height: 100vh;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .screen3__content{
@@ -97,13 +96,12 @@ body{
     width: 90%;
     height: 70%;
     margin: 30px auto;
-    padding: 30px;
+    padding: 3%;
     border-radius: 7%;
     box-shadow: 15px 15px 25px rgba(250, 50, 50, .4);
 }
 
 img{
-    margin: 10px;
     width: 100%;
     height: 100%;
     border-radius: 3%;
@@ -115,45 +113,35 @@ img{
 
 .title{
     display: inline-block;
-    margin: 8% auto 0 auto;
+    margin: 0 auto 200px auto;
 }
 
 .subtitle{
-    font-size: 2.8rem;
+    font-size: 3rem;
     
     display: inline-block;
-    width: 82%;
+    width: 84%;
     margin: 0 auto;
     padding: 35px;
     border-radius: 7%;
     background: linear-gradient(45deg, rgba(255, 226, 159, 1) 0%, rgba(255, 169, 159, 0.7) 48%, rgba(255, 113, 154, 0.3) 100%);
 }
 
-.subtitle p{
-    background-clip: content-box;
-    background: -webkit-linear-gradient(45deg, black, rgb(255, 78, 108), #2b2c34);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+
 
 h2{
     font-size: 7.3rem;
     text-align: center;
-
-    background-clip: content-box;
-    background: -webkit-linear-gradient(45deg, black, rgb(255, 78, 108), #2b2c34);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .photos__goes{
     font-size: 3rem;
-    border-radius: 5%;
+    border-radius: 30px;
     text-transform: uppercase;
     display: inline-block;
-    width: 82%;
+    width: 84%;
     padding: 35px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto;
     background: linear-gradient(90deg, #FC5C7D   0%, #6A82FB 100%);
 }
 
@@ -162,13 +150,16 @@ h2{
     text-align: center;
 }
 
-.footer{
-    height: 100px;
-    background: #333;
-    text-transform: uppercase;
-    padding: auto 0;
+span{
+    opacity: 0;
+    transition: all 2s ease 2s;
 }
 
-.footer p{
-    text-align: center;
+span._active{
+    opacity: 1;
+
+    background-clip: content-box;
+    background: -webkit-linear-gradient(45deg, black, rgb(255, 78, 108), #2b2c34);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
