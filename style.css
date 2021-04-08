@@ -12,7 +12,6 @@ html, body{
 }
 
 body{
-    max-width: 1200px;
     font-family: Nunito;
 }
 
@@ -74,14 +73,38 @@ body{
 }
 
 .screen3__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
     height: 100vh;
+    width: 95%;
+    margin: 200px auto 0 auto;
+    border-radius: 50px;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.815);
+    background: url('img/bg/quote_bg22.jpg') 50% 50% / cover no-repeat;
 }
 
 .quote{
     display: inline-block;
-    width: 82%;
-    margin: auto;
+    width: 80%;
+    padding: 30px;
+    margin: 50px auto 0px auto;
     font-style: italic;
+    border-radius: 20px;
+    text-align: justify;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.4) 100%);
+}
+
+q{
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    letter-spacing: 2px;
+    
+    background-clip: content-box;
+    background: -webkit-linear-gradient(180deg, rgb(0, 0, 0), #0a0a0a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .author{
@@ -90,15 +113,16 @@ body{
     font-size: 2.8rem;
     margin-left: 60%;
     font-weight: 600;
+    color: black;
 }
 
 .img{
-    width: 90%;
+    width: 78%;
     height: 70%;
     margin: 30px auto;
     padding: 3%;
     border-radius: 7%;
-    box-shadow: 15px 15px 25px rgba(250, 50, 50, .4);
+    box-shadow: 15px 15px 25px rgba(241, 19, 19, 0.815);
 }
 
 img{
@@ -120,14 +144,12 @@ img{
     font-size: 3rem;
     
     display: inline-block;
-    width: 84%;
+    width: 85%;
     margin: 0 auto;
     padding: 35px;
     border-radius: 7%;
-    background: linear-gradient(45deg, rgba(255, 226, 159, 1) 0%, rgba(255, 169, 159, 0.7) 48%, rgba(255, 113, 154, 0.3) 100%);
+    background: linear-gradient(45deg, rgba(255, 226, 159, 0.7) 0%, rgba(255, 169, 159, 0.7) 48%, rgba(255, 113, 154, 0.7) 100%);
 }
-
-
 
 h2{
     font-size: 7.3rem;
@@ -152,14 +174,30 @@ h2{
 
 span{
     opacity: 0;
-    transition: all 2s ease 2s;
+
+    transition: all 2s ease 0s;
 }
 
 span._active{
     opacity: 1;
 
     background-clip: content-box;
-    background: -webkit-linear-gradient(45deg, black, rgb(255, 78, 108), #2b2c34);
+    background: -webkit-linear-gradient(-90deg, rgb(253, 5, 46), #ffa6a6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fadeOut{
+    opacity: 0;
+
+    transition: all 2s ease 1s;
+}
+
+.fadeIn{
+    opacity: 1;
+
+    background-clip: content-box;
+    background: -webkit-linear-gradient(45deg, rgb(75, 0, 250), #fc0101);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
