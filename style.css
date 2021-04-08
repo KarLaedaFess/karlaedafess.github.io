@@ -13,6 +13,7 @@ html, body{
 
 body{
     font-family: Nunito;
+    overflow-x: hidden;
 }
 
 .wrapper{
@@ -68,7 +69,7 @@ body{
     align-items: center;
     justify-items: center;
     height: 100vh;
-    width: 95%;
+    width: 99%;
     margin: 200px auto 0 auto;
     border-radius: 50px;
     box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.815);
@@ -77,22 +78,21 @@ body{
 
 .quote{
     display: inline-block;
-    width: 80%;
-    padding: 30px;
+    width: 86%;
+    padding: 50px;
     margin: 50px auto 0px auto;
     font-style: italic;
     border-radius: 20px;
     text-align: justify;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 48%, rgba(255, 255, 255, 0.4) 100%);
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 48%, rgba(255, 255, 255, 0.6) 100%);
 }
 
 q{
-    font-size: 2.5rem;
-    line-height: 2.8rem;
+    font-size: 2.8rem;
     letter-spacing: 2px;
     
     background-clip: content-box;
-    background: -webkit-linear-gradient(180deg, rgb(0, 0, 0), #0a0a0a);
+    background: -webkit-linear-gradient(180deg, rgb(0, 0, 0), rgb(0, 0, 0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -138,7 +138,7 @@ img{
     margin: 0 auto;
     padding: 35px;
     border-radius: 7%;
-    background: linear-gradient(45deg, rgba(255, 226, 159, 0.7) 0%, rgba(255, 169, 159, 0.7) 48%, rgba(255, 113, 154, 0.7) 100%);
+    background: linear-gradient(180deg, rgba(255, 226, 159, 0.5) 0%, rgba(255, 169, 159, 0.5) 48%, rgba(255, 113, 154, 0.5) 100%);
 }
 
 h2{
@@ -187,7 +187,7 @@ span._active{
     opacity: 1;
 
     background-clip: content-box;
-    background: -webkit-linear-gradient(45deg, rgb(75, 0, 250), #fc0101);
+    background: -webkit-linear-gradient(-75deg, rgb(56, 0, 187), #ee0000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
